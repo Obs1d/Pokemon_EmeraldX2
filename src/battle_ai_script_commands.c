@@ -577,6 +577,7 @@ static u8 ChooseMoveOrAction_Doubles(void)
 {
     s32 i, j;
     u32 flags;
+
     s16 bestMovePointsForTarget[MAX_BATTLERS_COUNT];
     s8 mostViableTargetsArray[MAX_BATTLERS_COUNT];
     u8 actionOrMoveIndex[MAX_BATTLERS_COUNT];
