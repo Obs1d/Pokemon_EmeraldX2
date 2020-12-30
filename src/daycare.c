@@ -765,6 +765,48 @@ static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare
         else if (*species == SPECIES_MANTYKE && motherItem != ITEM_WAVE_INCENSE && fatherItem != ITEM_WAVE_INCENSE)
             *species = SPECIES_MANTINE;
     #endif
+	#ifdef SPECIES_VULPIX_ALOLAN
+        else if (*species == SPECIES_VULPIX && (motherItem == ITEM_ICE_STONE || fatherItem == ITEM_ICE_STONE))
+            *species = SPECIES_VULPIX_ALOLAN;
+		else if (*species == SPECIES_VULPIX_ALOLAN && (motherItem == ITEM_FIRE_STONE || fatherItem == ITEM_FIRE_STONE))
+            *species = SPECIES_VULPIX;
+    #endif
+	#ifdef SPECIES_SANDSHREW_ALOLAN
+        else if (*species == SPECIES_SANDSHREW && (motherItem == ITEM_ICE_STONE || fatherItem == ITEM_ICE_STONE))
+            *species = SPECIES_SANDSHREW_ALOLAN;
+		else if (*species == SPECIES_SANDSHREW_ALOLAN && (motherItem == ITEM_SOFT_SAND || fatherItem == ITEM_SOFT_SAND))
+            *species = SPECIES_SANDSHREW;
+    #endif
+	#ifdef SPECIES_RATTATA_ALOLAN
+        else if (*species == SPECIES_RATTATA && (motherItem == ITEM_DUSK_STONE || fatherItem == ITEM_DUSK_STONE))
+            *species = SPECIES_RATTATA_ALOLAN;
+		else if (*species == SPECIES_RATTATA_ALOLAN && (motherItem == ITEM_SHINY_STONE || fatherItem == ITEM_SHINY_STONE))
+            *species = SPECIES_RATTATA;
+    #endif
+	#ifdef SPECIES_DIGLETT_ALOLAN
+        else if (*species == SPECIES_DIGLETT && (motherItem == ITEM_METAL_COAT || fatherItem == ITEM_METAL_COAT))
+            *species = SPECIES_DIGLETT_ALOLAN;
+		else if (*species == SPECIES_DIGLETT_ALOLAN && (motherItem == ITEM_SOFT_SAND || fatherItem == ITEM_SOFT_SAND))
+            *species = SPECIES_DIGLETT;
+    #endif
+	#ifdef SPECIES_MEOWTH_ALOLAN
+        else if (*species == SPECIES_MEOWTH && (motherItem == ITEM_DUSK_STONE || fatherItem == ITEM_DUSK_STONE))
+            *species = SPECIES_MEOWTH_ALOLAN;
+		else if (*species == SPECIES_DIGLETT_ALOLAN && (motherItem == ITEM_SHINY_STONE || fatherItem == ITEM_SHINY_STONE))
+            *species = SPECIES_MEOWTH;
+    #endif
+	#ifdef SPECIES_GEODUDE_ALOLAN
+        else if (*species == SPECIES_GEODUDE && (motherItem == ITEM_THUNDER_STONE || fatherItem == ITEM_THUNDER_STONE))
+            *species = SPECIES_GEODUDE_ALOLAN;
+		else if (*species == SPECIES_DIGLETT_ALOLAN && (motherItem == ITEM_HARD_STONE || fatherItem == ITEM_HARD_STONE))
+            *species = SPECIES_GEODUDE;
+    #endif
+	#ifdef SPECIES_GRIMER_ALOLAN
+        else if (*species == SPECIES_GRIMER && (motherItem == ITEM_DUSK_STONE || fatherItem == ITEM_DUSK_STONE))
+            *species = SPECIES_GRIMER_ALOLAN;
+		else if (*species == SPECIES_GRIMER_ALOLAN && (motherItem == ITEM_BLACK_SLUDGE || fatherItem == ITEM_BLACK_SLUDGE))
+            *species = SPECIES_GRIMER;
+    #endif
 }
 
 static void GiveVoltTackleIfLightBall(struct Pokemon *mon, struct DayCare *daycare)
